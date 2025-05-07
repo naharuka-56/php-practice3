@@ -22,10 +22,11 @@ echo $date;
 
 $device = "windows";
 
-if ($device === "windows") {
-    echo '使用OSは、windouwsです。';
+if ($device === "windows" || $device === "mac") {
+    echo '使用OSは、'."$device" .'です。';
 }
-    else {echo $device === 'mac' ? '使用OSは、macです。' : 'どちらでもありません。';
+    else {echo 'どちらでもありません。';
+        
         //if ( $device === "mac"){
         //  echo '使用OSは、macです。';
         // }else {
