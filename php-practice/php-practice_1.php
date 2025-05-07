@@ -18,33 +18,36 @@ date_default_timezone_set("Asia/Tokyo");
 $date = date("現在時刻は、Y年m月d日 H時間i分s秒です。");
 echo $date; 
 
-// Q4 条件分岐-1 if文
+// :Q4 条件分岐-1 if文   if else 一つだけ
 
 $device = "windows";
 
 if ($device === "windows") {
     echo '使用OSは、windouwsです。';
 }
-    else {
-        if ( $device === "mac"){
-          echo '使用OSは、macです。';
-         }else {
-           echo 'どちらでもありません。';
-           }
+    else {echo $device === 'mac' ? '使用OSは、macです。' : 'どちらでもありません。';
+        //if ( $device === "mac"){
+        //  echo '使用OSは、macです。';
+        // }else {
+        //echo 'どちらでもありません。';
+        //   }
           }
 
 
-// Q5 条件分岐-2 三項演算子
+// Q5 条件分岐-2 三項演算子　if禁止
 
 $age = 20;
+$message = ($age > 18) ? '成人です。' : '未成年です。';
 
-if ($age < 18){
-    echo "未成年です。";
-}else {
-    echo "成人です。";
-}
+echo $message;
 
-// Q6 配列
+//if ($age < 18){
+//    echo "未成年です。";
+//}else {
+//    echo "成人です。";
+//}
+
+// :Q6 配列
 
 $prefectures = ['東京都', '神奈川県', '栃木県', '千葉県', '茨城県', '群馬県', '埼玉県'];
 
@@ -72,9 +75,10 @@ foreach ($prefectures as $x => $y){
     }
     }
 
-// Q9 連想配列-3
+//: Q9 連想配列-3　既存の
 
-$prefectures = ['東京都'=>'新宿区', '神奈川県'=>'横浜市', '栃木県'=>'宇都宮市', '千葉県'=>'千葉市', '茨城県'=>'水戸市', '群馬県'=>'前橋市', '埼玉県'=>'さいたま市', '愛知県'=>'名古屋市', '大阪府'=>'大阪市'];
+$prefectures['愛知県'] = '名古屋市';
+$prefectures['大阪府'] = '大阪市';
 
 foreach ($prefectures as $x => $y){
    if ($x ==='東京都' || $x ==='神奈川県' || $x ==='栃木県' || $x ==='千葉県' || $x ==='茨城県' || $x ==='群馬県' || $x ==='埼玉県'){
@@ -94,7 +98,7 @@ function hello($name)
 hello('金谷');
 hello('安藤');
 
-// Q11 関数-2
+// :Q11 関数-2
 
 function calcTaxInPrice($price)
 {

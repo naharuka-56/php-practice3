@@ -1,7 +1,6 @@
 <?php
-// Q1 tic-tac問題
 
-// Q1 tic-tac問題
+// :Q1 tic-tac問題
 
 echo '1から100までのカウントを開始します'."\n";
 
@@ -30,44 +29,44 @@ foreach ($personalInfos as $x => $y)
   echo ($x+1).'番目の'. $y['name'].'のメールアドレスは'.$y['mail'].'で、電話番号は'.$y['tel'].'です。'."\n";
 }
 
-//問題３
+//:問題３
 $personalInfos[0]['age'] = 25;
 $personalInfos[1]['age'] = 30;
 $personalInfos[2]['age'] = 18;
 
 var_dump($personalInfos);
 
-// Q3 オブジェクト-1
+// :Q3 オブジェクト-1
 
 $studentId = 120 ;
 $studentName = '中山';
 
 echo '学籍番号'.$studentId.'番の生徒は'.$studentName.'です。';
 
-// Q4 オブジェクト-2
+// :Q4 オブジェクト-2
 
 class Student
 {
     public $studentId;
     public $studentName;
 
-    public function __construct($id, $name)
+    public function __construct($id, $name) //インスタン化される際に実行される特別なメソッド
     {
         $this->studentId = $id;
         $this->studentName = $name;
     }
 
-    public function attend($subject)
+    public function attend($subject)//メソッド
     {
         $this->attend = $subject;
         echo  $this->studentName.'は'.$this->attend. 'の授業に出席しました。学籍番号：'. $this->studentId;
     }
 }
 
-$yamada = new Student(120, '山田');
+$yamada = new Student(120, '山田');//実体化　インスタンス=実体→クラスをインスタンスに実体化することをインスタンス化という
 $yamada->attend('PHP');
 
-// Q5 定義済みクラス
+// :Q5 定義済みクラス
 
 //問題１
 
